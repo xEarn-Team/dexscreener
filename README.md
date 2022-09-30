@@ -1,8 +1,13 @@
-const { fetchPrice } = require("./lib/index.js");
+# Example
+
+```javascript
+
+const { fetchPrice } = require("dexscreener");
 
 async function main() {
     const priceNative = await fetchPrice("avalanchedfk", "defikingdoms", "DFKSHVAS/CRYSTAL");
     console.log(`priceNative: ${priceNative}`);
+
     const priceUsd = await fetchPrice("avalanchedfk", "defikingdoms", "DFKSHVAS/CRYSTAL", inUSD = true);
     console.log(`priceUsd: ${priceUsd}`);
 }
@@ -13,3 +18,5 @@ main()
         console.error(e);
         process.exit(1);
     });
+
+```
